@@ -199,18 +199,19 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                 alignment: Alignment.bottomRight,
                 children: <Widget>[
                   IntrinsicWidth(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        ValidationItem("8 characters", eightChars),
-                        _separator(),
-                        ValidationItem("1 special character", specialChar),
-                        _separator(),
-                        ValidationItem("1 upper case", upperCaseChar),
-                        _separator(),
-                        ValidationItem("1 number", number)
-                      ],
+                    child: FittedBox(
+                      child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          ValidationItem("8 characters", eightChars),
+                          _separator(),
+                          ValidationItem("1 special character", specialChar),
+                          _separator(),
+                          ValidationItem("1 upper case", upperCaseChar),
+                          _separator(),
+                          ValidationItem("1 number", number)
+                        ],
+                      )
                     ),
                   ),
                   Padding(
